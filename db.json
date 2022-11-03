@@ -1,0 +1,36 @@
+{
+    "UserData": [
+        {
+            "id": 1658303475944,
+            "fname": "Akshay",
+            "lname": "Kanherkar",
+            "email": "Akshaykanherkar7@gmail.com",
+            "mobile": "9730423294",
+            "password": "Akshay@973042"
+        }
+    ],
+    "Posts": [
+        {
+            "img_url": "ak",
+            "description": "aks"
+        }
+    ],
+    "Comments": [
+        {
+            "username": "akshaykanherkar",
+            "comment": "nice"
+        }
+    ],
+    "Likes": [
+        {
+            "username": "akshaykanherkar",
+            "countlikes": 0
+        }
+    ],
+    "Save": [
+        {
+            "post_id": 1,
+            "username": "akshaykanherkar"
+        }
+    ]
+}
