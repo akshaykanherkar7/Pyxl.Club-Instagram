@@ -1,0 +1,34 @@
+#sidebar_Outer {
+  border: 1px solid lightgray;
+  border-bottom: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+#sidebar_Outer span {
+  color: rgb(60, 58, 58);
+  font-size: 19px;
+}
+#sidebar_Outer div {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+#sidebar_Outer div:hover {
+  background-color: #fafafa;
+}
+
+@media (max-width: 1066px) {
+  #sidebar_Outer {
+    display: none;
+  }
+}
