@@ -86,6 +86,10 @@ const Navbar = () => {
                   <i class="fa-solid fa-car"></i>
                   <span>My Posts</span>
                 </MenuItem>
+                <MenuItem minH="40px" gap="30px" onClick={handleBooking}>
+                  <i class="fa-solid fa-car"></i>
+                  <span>Saved Posts</span>
+                </MenuItem>
                 <MenuItem minH="40px" gap="30px" onClick={handleLogout}>
                   <i class="fa-solid fa-arrow-right-from-bracket"></i>
                   <span>Logout</span>

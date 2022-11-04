@@ -9,10 +9,10 @@ const MainHomePage = () => {
       <Navbar></Navbar>
       <Box>
         <Flex >
-          <Box w="15%">
+          <Box w={["3%","5%","15%"]}>
             <Sidebar></Sidebar>
           </Box>
-          <Box border="1px solid lightgray" w="85%"></Box>
+          <Box w="85%"></Box>
         </Flex>
       </Box>
     </div>

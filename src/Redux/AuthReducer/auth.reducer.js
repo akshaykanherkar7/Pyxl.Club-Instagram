@@ -41,6 +41,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
       }
 
       if (flag === true) {
+        console.log("INSIDE TRUE")
         return { ...state, isAuth: true, isLoading: false, isError: false };
       } else {
         return { ...state, isAuth: false, isLoading: false, isError: false };

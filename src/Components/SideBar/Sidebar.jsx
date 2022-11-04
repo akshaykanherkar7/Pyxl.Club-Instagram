@@ -6,51 +6,50 @@ const Sidebar = () => {
   return (
     <div id="sidebar_Outer">
       <img
-        style={{ width: "80%" }}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDukpoPvXH-FjCWHHt_FkrYd5SNiLRSy16X5o4uVrWu2eyJVmL8ff3z38fT4uGTOfoEQ&usqp=CAU"
         alt="insta_logo"
       />
 
       <div>
-        <span>
+        <span id="visible">
           <i class="fa-solid fa-house"></i>
         </span>
-        <span>Home</span>
+        <span id="hide">Home</span>
       </div>
 
       <div>
-        <span>
+        <span id="visible">
           <i class="fa-solid fa-cart-shopping"></i>
         </span>
-        <span>Search</span>
+        <span id="hide">Search</span>
       </div>
 
       <div>
-        <span>
+        <span id="visible">
           <i class="fa-solid fa-cube"></i>
         </span>
-        <span>Explore</span>
+        <span id="hide">Explore</span>
       </div>
 
       <div>
-        <span>
+        <span id="visible">
           <TiThLarge />
         </span>
-        <span>Messages</span>
+        <span id="hide">Messages</span>
       </div>
 
       <div>
-        <span>
+        <span id="visible">
           <TiThLarge />
         </span>
-        <span>Notifications</span>
+        <span id="hide">Notifications</span>
       </div>
 
       <div>
-        <span>
+        <span id="visible">
           <i class="fa-solid fa-chart-simple"></i>
         </span>
-        <span>Create</span>
+        <span id="hide">Create</span>
       </div>
 
       {/* <div>
@@ -61,10 +60,10 @@ const Sidebar = () => {
       </div> */}
 
       <div style={{ marginTop: "55px" }}>
-        <span>
+        <span id="visible">
           <i class="fa-solid fa-house"></i>
         </span>
-        <span>More</span>
+        <span id="hide">More</span>
       </div>
     </div>
   );
