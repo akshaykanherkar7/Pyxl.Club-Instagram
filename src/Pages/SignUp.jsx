@@ -216,6 +216,15 @@ const SignUp = () => {
                           onChange={HandleOnChangeData}
                         />
                       </FormControl>
+                      <FormControl id="username" isRequired>
+                        <FormLabel>Username</FormLabel>
+                        <Input
+                          type="string"
+                          name="username"
+                          value={data.username}
+                          onChange={HandleOnChangeData}
+                        />
+                      </FormControl>
                       <Box>
                         <FormControl id="mobile" isRequired>
                           <FormLabel>Mobile</FormLabel>

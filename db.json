@@ -9,35 +9,131 @@
       "id": 1
     },
     {
-      "email": "Akshay@gmail.com",
+      "username": "akshaykanherkar7",
       "password": "Akshay",
       "fname": "Akshay",
       "lname": "Kanherkar",
+      "email": "Akshay@gmail.com",
       "number": "9730423294",
       "id": 2
     }
   ],
   "Posts": [
     {
-      "img_url": "ak",
-      "description": "aks"
-    }
-  ],
-  "Comments": [
+      "id": 1,
+      "username": "AkshayKanherkar",
+      "img_url": "https://m.timesofindia.com/thumb.cms?msid=88016176&width=200&height=281",
+      "description": "Atarangi Re Movie",
+      "countlikes": 2,
+      "Comments": [
+        {
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "gggggggggggggggggg"
+        },
+        {
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "okok"
+        }
+      ],
+      "Likes": [
+        {
+          "user_id": 5,
+          "username": "akshaykanherkar7"
+        }
+      ]
+    },
     {
-      "username": "akshaykanherkar",
-      "comment": "nice"
-    }
-  ],
-  "Likes": [
+      "id": 2,
+      "username": "KrunalBhandekar",
+      "img_url": "https://images.lifestyleasia.com/wp-content/uploads/sites/5/2022/01/06123050/131771051_1749755595187759_6764730855785943263_n.jpg",
+      "description": "Pathan",
+      "countlikes": 8,
+      "Comments": [
+        {
+          "user_id": 5,
+          "username": "akshaykanherkar",
+          "comment": "nice"
+        },
+        {
+          "user_id": 6,
+          "username": "Krunalbhandekar",
+          "comment": "nice picture"
+        },
+        {
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "AAAAAAA"
+        },
+        {
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "aaa"
+        }
+      ],
+      "Likes": [
+        {
+          "user_id": 5,
+          "username": "akshaykanherkar"
+        }
+      ]
+    },
     {
-      "username": "akshaykanherkar",
-      "countlikes": 0
+      "id": 3,
+      "username": "Ganesh Sabale",
+      "img_url": "https://filmfare.wwmindia.com/content/2021/jan/bollywood-upcoming-movies-gangubai-kathiawadi-51611325299.jpg",
+      "description": "Ganguly Kathawadi",
+      "countlikes": 7,
+      "Comments": [
+        {
+          "user_id": 5,
+          "username": "akshaykanherkar",
+          "comment": "nice"
+        },
+        {
+          "user_id": 6,
+          "username": "Gani",
+          "comment": "nice Krunal"
+        }
+      ],
+      "Likes": [
+        {
+          "user_id": 5,
+          "username": "akshaykanherkar7"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "username": "Soma",
+      "img_url": "https://filmfare.wwmindia.com/content/2021/jan/bollywood-upcoming-movies-gangubai-kathiawadi-51611325299.jpg",
+      "description": "Ganguly Kathawadi",
+      "countlikes": 3,
+      "Comments": [
+        {
+          "user_id": 5,
+          "username": "akshaykanherkar",
+          "comment": "nice"
+        },
+        {
+          "user_id": 6,
+          "username": "Krunalbhandekar",
+          "comment": "nice picture"
+        }
+      ],
+      "Likes": [
+        {
+          "user_id": 5,
+          "username": "akshaykanherkar"
+        }
+      ]
     }
   ],
   "Save": [
     {
       "post_id": 1,
+      "user_id": 5,
       "username": "akshaykanherkar"
     }
   ]

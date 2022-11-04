@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import { TiThLarge } from "react-icons/ti";
+import CreateNewPostModal from "../CreatePostModal/CreateNewPostModal";
 
 const Sidebar = () => {
   return (
@@ -19,38 +20,39 @@ const Sidebar = () => {
 
       <div>
         <span id="visible">
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </span>
         <span id="hide">Search</span>
       </div>
 
       <div>
         <span id="visible">
-          <i class="fa-solid fa-cube"></i>
+          <i class="fa-solid fa-compass"></i>
         </span>
         <span id="hide">Explore</span>
       </div>
 
       <div>
         <span id="visible">
-          <TiThLarge />
+          <i class="fa-solid fa-message"></i>
         </span>
         <span id="hide">Messages</span>
       </div>
 
       <div>
         <span id="visible">
-          <TiThLarge />
+          <i class="fa-regular fa-heart"></i>
         </span>
         <span id="hide">Notifications</span>
       </div>
 
-      <div>
-        <span id="visible">
-          <i class="fa-solid fa-chart-simple"></i>
+      {/* <div> */}
+        {/* <span id="visible">
+          <i class="fa-regular fa-square-plus"></i>
         </span>
-        <span id="hide">Create</span>
-      </div>
+        <span id="hide">Create</span> */}
+        <CreateNewPostModal></CreateNewPostModal>
+      {/* </div> */}
 
       {/* <div>
         <span>
@@ -61,7 +63,7 @@ const Sidebar = () => {
 
       <div style={{ marginTop: "55px" }}>
         <span id="visible">
-          <i class="fa-solid fa-house"></i>
+        <i class="fas fa-bars" id="bars"></i>
         </span>
         <span id="hide">More</span>
       </div>
