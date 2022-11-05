@@ -46,3 +46,16 @@ export const postCommentAPI = (id, newData) => (dispatch) => {
       console.log("err:", err);
     });
 };
+
+// DELTE POST
+export const deletePostAPI = (id) => (dispatch) => {
+  dispatch({ type: types.DELETE_POST_REQ });
+  return axios
+    .delete(`http://localhost:8080/Posts/${id}`)
+    .then((res) => {
+      return types.DELETE_POST_SUCC;
+    })
+    .catch((err) => {
+      return types.DELETE_POST_FAI;
+    });
+};

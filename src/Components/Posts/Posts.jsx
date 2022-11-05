@@ -55,6 +55,7 @@ const Posts = ({ Item }) => {
       user_id: userData.id,
       username: userData.username,
       comment: postCmnt,
+      time: Date(),
     };
     Data.Comments.push(payload);
     console.log("Data:", Data);
@@ -135,7 +136,7 @@ const Posts = ({ Item }) => {
                 style={{ fontSize: "26px", cursor: "pointer" }}
               ></i>
             </Box> */}
-            <Mainu></Mainu>
+            <Mainu Item={Item}></Mainu>
           </Box>
         </Flex>
       </Box>
@@ -250,8 +251,11 @@ const Posts = ({ Item }) => {
             onChange={(e) => setPostCmnt(e.target.value)}
           ></Input>
           <Button
+            id="postbtn"
             onClick={() => handleAddComment(Item)}
-            colorScheme={"teal"}
+            color={"#21a3f6"}
+            backgroundColor={"white"}
+            disabled={postCmnt === ""}
             h="85%"
           >
             Post

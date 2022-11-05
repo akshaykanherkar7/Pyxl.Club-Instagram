@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Components/Navbar/Navbar";
 import Posts from "../Components/Posts/Posts";
 import Sidebar from "../Components/SideBar/Sidebar";
+import Stories from "../Components/Stories/Stories";
 import { getPostsAPI } from "../Redux/Posts/post.action";
 import "./MainHomePage.css";
 
@@ -39,6 +40,7 @@ const MainHomePage = () => {
           </Box>
           <Box w="15%"></Box>
           <Box w="35%">
+            <Stories></Stories>
             {PostsData.length > 0 &&
               PostsData.map((Item) => (
                 <Posts key={Item.id} Item={Item}></Posts>

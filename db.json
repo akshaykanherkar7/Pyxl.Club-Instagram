@@ -1,6 +1,7 @@
 {
   "UserData": [
     {
+      "username": "KrunalB",
       "email": "Krunal@gmail.com",
       "password": "Krunal",
       "fname": "Krunal",
@@ -21,20 +22,23 @@
   "Posts": [
     {
       "id": 1,
-      "username": "AkshayKanherkar",
+      "user_id": 1,
+      "username": "KrunalB",
       "img_url": "https://m.timesofindia.com/thumb.cms?msid=88016176&width=200&height=281",
       "description": "Atarangi Re Movie",
       "countlikes": 3,
       "Comments": [
         {
-          "user_id": 2,
-          "username": "akshaykanherkar7",
-          "comment": "gggggggggggggggggg"
+          "user_id": 1,
+          "username": "KrunalB",
+          "comment": "Nice Movie Akshay..",
+          "time": "Sat Nov 05 2022 18:37:47 GMT+0530 (India Standard Time)"
         },
         {
           "user_id": 2,
           "username": "akshaykanherkar7",
-          "comment": "okok"
+          "comment": "Thans Krunal bhai",
+          "time": "Sat Nov 05 2022 18:39:50 GMT+0530 (India Standard Time)"
         }
       ],
       "Likes": [
@@ -46,35 +50,23 @@
     },
     {
       "id": 2,
+      "user_id": 2,
       "username": "KrunalBhandekar",
       "img_url": "https://images.lifestyleasia.com/wp-content/uploads/sites/5/2022/01/06123050/131771051_1749755595187759_6764730855785943263_n.jpg",
       "description": "Pathan",
       "countlikes": 8,
       "Comments": [
         {
-          "user_id": 5,
-          "username": "akshaykanherkar",
-          "comment": "nice"
-        },
-        {
-          "user_id": 6,
-          "username": "Krunalbhandekar",
-          "comment": "nice picture"
+          "user_id": 1,
+          "username": "KrunalB",
+          "comment": "Waiting for this Movie.",
+          "time": "Sat Nov 05 2022 18:38:09 GMT+0530 (India Standard Time)"
         },
         {
           "user_id": 2,
           "username": "akshaykanherkar7",
-          "comment": "AAAAAAA"
-        },
-        {
-          "user_id": 2,
-          "username": "akshaykanherkar7",
-          "comment": "aaa"
-        },
-        {
-          "user_id": 2,
-          "username": "akshaykanherkar7",
-          "comment": "waiting to watch.."
+          "comment": "ya...,I'm 2.",
+          "time": "Sat Nov 05 2022 18:40:18 GMT+0530 (India Standard Time)"
         }
       ],
       "Likes": [
@@ -86,20 +78,23 @@
     },
     {
       "id": 3,
-      "username": "Ganesh Sabale",
+      "user_id": 2,
+      "username": "akshaykanherkar7",
       "img_url": "https://filmfare.wwmindia.com/content/2021/jan/bollywood-upcoming-movies-gangubai-kathiawadi-51611325299.jpg",
       "description": "Ganguly Kathawadi",
       "countlikes": 7,
       "Comments": [
         {
-          "user_id": 5,
-          "username": "akshaykanherkar",
-          "comment": "nice"
+          "user_id": 1,
+          "username": "KrunalB",
+          "comment": "Ganesh you watched this movie..?",
+          "time": "Sat Nov 05 2022 18:38:44 GMT+0530 (India Standard Time)"
         },
         {
-          "user_id": 6,
-          "username": "Gani",
-          "comment": "nice Krunal"
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "I watched. ",
+          "time": "Sat Nov 05 2022 18:40:32 GMT+0530 (India Standard Time)"
         }
       ],
       "Likes": [
@@ -111,20 +106,23 @@
     },
     {
       "id": 4,
+      "user_id": 3,
       "username": "Soma",
       "img_url": "https://filmfare.wwmindia.com/content/2021/jan/bollywood-upcoming-movies-gangubai-kathiawadi-51611325299.jpg",
       "description": "Ganguly Kathawadi",
-      "countlikes": 3,
+      "countlikes": 4,
       "Comments": [
         {
-          "user_id": 5,
-          "username": "akshaykanherkar",
-          "comment": "nice"
+          "user_id": 1,
+          "username": "KrunalB",
+          "comment": "Ganesh and tu gaya tha kya..?",
+          "time": "Sat Nov 05 2022 18:38:58 GMT+0530 (India Standard Time)"
         },
         {
-          "user_id": 6,
-          "username": "Krunalbhandekar",
-          "comment": "nice picture"
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "I also went with them.",
+          "time": "Sat Nov 05 2022 18:40:51 GMT+0530 (India Standard Time)"
         }
       ],
       "Likes": [
@@ -135,15 +133,23 @@
       ]
     },
     {
+      "user_id": 2,
       "img_url": "https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/09/dhokha-round-d-corner-001.jpg",
       "description": "DHO KHA Movie",
       "username": "akshaykanherkar7",
       "countlikes": 1,
       "Comments": [
         {
+          "user_id": 1,
+          "username": "KrunalB",
+          "comment": "Bhai kitna movies dekhega..",
+          "time": "Sat Nov 05 2022 18:39:13 GMT+0530 (India Standard Time)"
+        },
+        {
           "user_id": 2,
           "username": "akshaykanherkar7",
-          "comment": "haa"
+          "comment": "ha bha dekhuga. hahaha",
+          "time": "Sat Nov 05 2022 18:41:20 GMT+0530 (India Standard Time)"
         }
       ],
       "Likes": [],
@@ -152,13 +158,8 @@
   ],
   "Save": [
     {
-      "id": 1,
-      "user_id": 5,
-      "username": "akshaykanherkar",
-      "posts": []
-    },
-    {
-      "user_id": 1,
+      "user_id": 2,
+      "username": "akshaykanherkar7",
       "posts": [
         {
           "id": 1,
@@ -168,14 +169,16 @@
           "countlikes": 3,
           "Comments": [
             {
-              "user_id": 2,
-              "username": "akshaykanherkar7",
-              "comment": "gggggggggggggggggg"
+              "user_id": 1,
+              "username": "KrunalB",
+              "comment": "Nice Movie Akshay..",
+              "time": "Sat Nov 05 2022 18:37:47 GMT+0530 (India Standard Time)"
             },
             {
               "user_id": 2,
               "username": "akshaykanherkar7",
-              "comment": "okok"
+              "comment": "Thans Krunal bhai",
+              "time": "Sat Nov 05 2022 18:39:50 GMT+0530 (India Standard Time)"
             }
           ],
           "Likes": [
@@ -186,10 +189,11 @@
           ]
         }
       ],
-      "id": 2
+      "id": 1
     },
     {
-      "user_id": 1,
+      "user_id": 2,
+      "username": "akshaykanherkar7",
       "posts": [
         {
           "img_url": "https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/09/dhokha-round-d-corner-001.jpg",
@@ -198,79 +202,46 @@
           "countlikes": 1,
           "Comments": [
             {
+              "user_id": 1,
+              "username": "KrunalB",
+              "comment": "Bhai kitna movies dekhega..",
+              "time": "Sat Nov 05 2022 18:39:13 GMT+0530 (India Standard Time)"
+            },
+            {
               "user_id": 2,
               "username": "akshaykanherkar7",
-              "comment": "haa"
+              "comment": "ha bha dekhuga. hahaha",
+              "time": "Sat Nov 05 2022 18:41:20 GMT+0530 (India Standard Time)"
             }
           ],
           "Likes": [],
           "id": 5
         }
       ],
-      "id": 3
+      "id": 2
     },
     {
-      "user_id": 2,
-      "username": "akshaykanherkar7",
+      "user_id": 1,
+      "username": "KrunalB",
       "posts": [
         {
-          "id": 1,
-          "username": "AkshayKanherkar",
-          "img_url": "https://m.timesofindia.com/thumb.cms?msid=88016176&width=200&height=281",
-          "description": "Atarangi Re Movie",
+          "id": 4,
+          "username": "Soma",
+          "img_url": "https://filmfare.wwmindia.com/content/2021/jan/bollywood-upcoming-movies-gangubai-kathiawadi-51611325299.jpg",
+          "description": "Ganguly Kathawadi",
           "countlikes": 3,
           "Comments": [
             {
-              "user_id": 2,
-              "username": "akshaykanherkar7",
-              "comment": "gggggggggggggggggg"
+              "user_id": 1,
+              "username": "KrunalB",
+              "comment": "Ganesh and tu gaya tha kya..?",
+              "time": "Sat Nov 05 2022 18:38:58 GMT+0530 (India Standard Time)"
             },
             {
               "user_id": 2,
               "username": "akshaykanherkar7",
-              "comment": "okok"
-            }
-          ],
-          "Likes": [
-            {
-              "user_id": 5,
-              "username": "akshaykanherkar7"
-            }
-          ]
-        }
-      ],
-      "id": 4
-    },
-    {
-      "user_id": 2,
-      "username": "akshaykanherkar7",
-      "posts": [
-        {
-          "id": 2,
-          "username": "KrunalBhandekar",
-          "img_url": "https://images.lifestyleasia.com/wp-content/uploads/sites/5/2022/01/06123050/131771051_1749755595187759_6764730855785943263_n.jpg",
-          "description": "Pathan",
-          "countlikes": 8,
-          "Comments": [
-            {
-              "user_id": 5,
-              "username": "akshaykanherkar",
-              "comment": "nice"
-            },
-            {
-              "user_id": 6,
-              "username": "Krunalbhandekar",
-              "comment": "nice picture"
-            },
-            {
-              "user_id": 2,
-              "username": "akshaykanherkar7",
-              "comment": "AAAAAAA"
-            },
-            {
-              "user_id": 2,
-              "username": "akshaykanherkar7",
-              "comment": "aaa"
+              "comment": "I also went with them.",
+              "time": "Sat Nov 05 2022 18:40:51 GMT+0530 (India Standard Time)"
             }
           ],
           "Likes": [
@@ -281,7 +252,44 @@
           ]
         }
       ],
-      "id": 5
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "username": "KrunalB",
+      "posts": [
+        {
+          "id": 2,
+          "username": "KrunalBhandekar",
+          "img_url": "https://images.lifestyleasia.com/wp-content/uploads/sites/5/2022/01/06123050/131771051_1749755595187759_6764730855785943263_n.jpg",
+          "description": "Pathan",
+          "countlikes": 8,
+          "Comments": [
+            {
+              "user_id": 1,
+              "username": "KrunalB",
+              "comment": "Waiting for this Movie.",
+              "time": "Sat Nov 05 2022 18:38:09 GMT+0530 (India Standard Time)"
+            },
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "ya...,I'm 2.",
+              "time": "Sat Nov 05 2022 18:40:18 GMT+0530 (India Standard Time)"
+            }
+          ],
+          "Likes": [
+            {
+              "user_id": 5,
+              "username": "akshaykanherkar"
+            }
+          ]
+        }
+      ],
+      "id": 4
     }
+  ],
+  "Messages": [
+    
   ]
 }

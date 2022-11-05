@@ -15,6 +15,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import SignIn from "../../Pages/SignIn";
 import { logOutAPI } from "../../Redux/AuthReducer/auth.action";
+import { getSavedPostsAPI } from "../../Redux/SavePosts/save.action";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -32,11 +33,12 @@ const Navbar = () => {
     navigate("/");
   };
 
-  const handleBooking = () => {
-    navigate("/mybookings");
+  const handleMyPosts = () => {
+    navigate("/myposts");
   };
 
   const handleSavedPost = () => {
+    dispatch(getSavedPostsAPI());
     navigate("/savedposts");
   };
 
@@ -86,7 +88,7 @@ const Navbar = () => {
                   <i class="fa-solid fa-user"></i>
                   <span>My Profile</span>
                 </MenuItem>
-                <MenuItem minH="40px" gap="30px" onClick={handleBooking}>
+                <MenuItem minH="40px" gap="30px" onClick={handleMyPosts}>
                   <i class="fa-solid fa-image"></i>
                   <span>My Posts</span>
                 </MenuItem>

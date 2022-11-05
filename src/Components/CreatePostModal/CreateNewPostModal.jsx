@@ -40,6 +40,7 @@ const CreateNewPostModal = ({ handleCreate, path }) => {
     let post = {
       img_url: imgUrl,
       description: Desc,
+      user_id: userData.id,
       username: userData.username,
       countlikes: 0,
       Comments: [],

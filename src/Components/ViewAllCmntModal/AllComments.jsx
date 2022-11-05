@@ -17,6 +17,28 @@ import React from "react";
 
 const AllComments = ({ Item }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const hours = (data) => {
+    let { time } = data;
+    let arr = time.toString().split(" ");
+    console.log("arr:", arr);
+    let ctime = arr[4];
+    return ctime;
+  };
+  const Day = (data) => {
+    let { time } = data;
+    let arr = time.toString().split(" ");
+    console.log("arr:", arr);
+    let day = arr[0];
+    return day;
+  };
+  const getAADate = (data) => {
+    let { time } = data;
+    let arr = time.toString().split(" ");
+    console.log("arr:", arr);
+    let date = arr[2];
+    return date;
+  };
   return (
     <>
       <Text
@@ -27,7 +49,9 @@ const AllComments = ({ Item }) => {
         onClick={onOpen}
       >
         {/* View all {Item.Comments.length} comments */}
-        {Item.Comments.length === 0 ? "No Comments" : `View all ${Item.Comments.length} comments`}
+        {Item.Comments.length === 0
+          ? "No Comments"
+          : `View all ${Item.Comments.length} comments`}
       </Text>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -50,23 +74,32 @@ const AllComments = ({ Item }) => {
                             src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
                           ></Image>
                         </Box>
-                        <Text
-                          //   border="1px solid black"
-                          ml="-5px"
-                          key={el.id}
-                          paddingLeft="15px"
-                        >
-                          <span
-                            style={{
-                              fontWeight: "bold",
-                              cursor: "pointer",
-                              color: "#484848",
-                            }}
+                        <Box mt="5px">
+                          <Text mt="15px"
+                            //   border="1px solid black"
+                            ml="-5px"
+                            key={el.id}
+                            paddingLeft="15px"
                           >
-                            {el.username}{" "}
-                          </span>
-                          {el.comment}
-                        </Text>
+                            <span
+                              style={{
+                                fontWeight: "bold",
+                                cursor: "pointer",
+                                color: "#484848",
+                              }}
+                            >
+                              {el.username}{" "}
+                            </span>
+                            {el.comment}
+                          </Text>
+                          <Box w="100%" ml="10px">
+                            <Flex h="100%" justifyContent="space-evenly">
+                              <Text color="gray">{getAADate(el)}</Text>
+                              <Text color="gray">{Day(el)}</Text>
+                              <Text color="gray">{hours(el)} hrs</Text>
+                            </Flex>
+                          </Box>
+                        </Box>
                       </Flex>
                     </Box>
                   ))}
