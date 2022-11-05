@@ -19,28 +19,52 @@ import {
   Textarea,
   useColorModeValue,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { createPostAPI, getPostsAPI } from "../../Redux/Posts/post.action";
+import { CREATE_POST_SUCC } from "../../Redux/Posts/post.actionTypes";
 
-const CreateNewPostModal = () => {
+const CreateNewPostModal = ({ handleCreate, path }) => {
   const [imgUrl, setImgUrl] = useState("");
   const [Desc, setDesc] = useState("");
 
-  let userData = JSON.parse(localStorage.getItem("LoginData"));
-
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const dispatch = useDispatch();
+  const toast = useToast();
+
+  let userData = JSON.parse(localStorage.getItem("LoginData"));
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleCreatePost = () => {
     let post = {
-      image_url: imgUrl,
+      img_url: imgUrl,
       description: Desc,
       username: userData.username,
       countlikes: 0,
       Comments: [],
       Likes: [],
     };
+    console.log(post);
+    dispatch(createPostAPI(post)).then((res) => {
+      if (res === CREATE_POST_SUCC) {
+        dispatch(getPostsAPI());
+        toast({
+          title: "Post Successfully Posted",
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+        });
+        onClose();
+      } else {
+        toast({
+          title: "Failed to Post Post",
+          status: "error",
+          duration: 2000,
+          isClosable: true,
+        });
+      }
+    });
   };
 
   return (
@@ -49,7 +73,13 @@ const CreateNewPostModal = () => {
         <span id="visible">
           <i class="fa-regular fa-square-plus"></i>
         </span>
-        <span id="hide">Create</span>
+        <span
+          style={path === "create" ? { fontWeight: "bold" } : null}
+          onClick={handleCreate}
+          id="hide"
+        >
+          Create
+        </span>
       </div>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -92,7 +122,7 @@ const CreateNewPostModal = () => {
                         }}
                         onClick={handleCreatePost}
                       >
-                        Sign up
+                        Post
                       </Button>
                     </Stack>
 

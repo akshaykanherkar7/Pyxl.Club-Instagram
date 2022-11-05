@@ -37,52 +37,6 @@ import {
 } from "../Redux/AuthReducer/auth.action";
 import { REGISTER_SUCCESS } from "../Redux/AuthReducer/auth.actionTypes";
 
-// function reducer(state, action) {
-//   switch (action.type) {
-//     case "fname":
-//       return {
-//         ...state,
-//         fname: action.payload,
-//       };
-
-//     case "lname":
-//       return {
-//         ...state,
-//         lname: action.payload,
-//       };
-
-//     case "email":
-//       return {
-//         ...state,
-//         email: action.payload,
-//       };
-
-//     case "mobile":
-//       return {
-//         ...state,
-//         mobile: action.payload,
-//       };
-
-//     case "password":
-//       return {
-//         ...state,
-//         password: action.payload,
-//       };
-
-//     default:
-//       return state;
-//   }
-// }
-
-// const initialState = {
-//   id: Date.now(),
-//   fname: "",
-//   lname: "",
-//   email: "",
-//   mobile: +91,
-//   password: "",
-// };
-
 const SignUp = () => {
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();

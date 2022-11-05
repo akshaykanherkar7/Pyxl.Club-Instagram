@@ -7,9 +7,11 @@ export const registerSignUpAPI = (user) => (dispatch) => {
     .post("http://localhost:8080/UserData", user)
     .then((res) => {
       dispatch({ type: types.REGISTER_SUCCESS, payload: res.data });
+      return types.REGISTER_SUCCESS
     })
     .catch((e) => {
       dispatch({ type: types.REGISTER_FAILED, payload: e });
+      return types.REGISTER_FAILED
     });
 };
 

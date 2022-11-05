@@ -22,11 +22,12 @@ const AllComments = ({ Item }) => {
       <Text
         //  border={"1px solid red"}
         color="gray"
-        paddingLeft="15px"
+        paddingLeft="20px"
         cursor="pointer"
         onClick={onOpen}
       >
-        View all {Item.Comments.length} comments
+        {/* View all {Item.Comments.length} comments */}
+        {Item.Comments.length === 0 ? "No Comments" : `View all ${Item.Comments.length} comments`}
       </Text>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />

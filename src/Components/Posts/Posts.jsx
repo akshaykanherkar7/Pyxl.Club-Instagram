@@ -1,10 +1,21 @@
-import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Input,
+  Text,
+  useToast,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { likeAPI, postCommentAPI } from "../../Redux/Posts/post.action";
 import {
-  likeAPI,
-  postCommentAPI,
-} from "../../Redux/Posts/post.action";
+  getSavedPostsAPI,
+  savePostAPI,
+} from "../../Redux/SavePosts/save.action";
+import { SAVE_POST_SCC } from "../../Redux/SavePosts/save.actionTypes";
+import Mainu from "../ThreeMore/Mainu";
 import AllComments from "../ViewAllCmntModal/AllComments";
 import "./Posts.css";
 
@@ -15,10 +26,11 @@ const Posts = ({ Item }) => {
   const [likedData, setLikedData] = useState([...Item.Likes]);
   const [postCmnt, setPostCmnt] = useState("");
   let userData = JSON.parse(localStorage.getItem("LoginData"));
-  console.log("userData:", userData);
+  // console.log("userData:", userData);
   const [CountFlag, setCountFlag] = useState(true);
 
   const dispatch = useDispatch();
+  const toast = useToast();
 
   const handleLikebtn = (data) => {
     for (let i = 0; i < likedData.length; i++) {
@@ -50,6 +62,33 @@ const Posts = ({ Item }) => {
     setPostCmnt("");
   };
 
+  const handleSavePost = (Data) => {
+    let SavedPost = {
+      user_id: userData.id,
+      username: userData.username,
+      posts: [],
+    };
+    SavedPost.posts.push(Data);
+    dispatch(savePostAPI(SavedPost)).then((res) => {
+      if (res === SAVE_POST_SCC) {
+        dispatch(getSavedPostsAPI());
+        toast({
+          title: "Post Successfully Saved",
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Failed to Save Post",
+          status: "error",
+          duration: 2000,
+          isClosable: true,
+        });
+      }
+    });
+  };
+
   return (
     <div id="MainBox">
       <Box padding={"8px"} w={["100%", "100%", "100%"]}>
@@ -76,7 +115,8 @@ const Posts = ({ Item }) => {
           >
             <Text
               p="2px"
-              mt="2%"
+              mt="2.2%"
+              ml="-2%"
               fontWeight={500}
               fontFamily={"body"}
               cursor="pointer"
@@ -89,86 +129,103 @@ const Posts = ({ Item }) => {
             h="45px"
             //   border={"1px solid black"}
           >
-            <Box w="fit-content" mt="2" ml="5">
+            {/* <Box w="fit-content" mt="2" ml="5">
               <i
                 class="fa-solid fa-ellipsis"
                 style={{ fontSize: "26px", cursor: "pointer" }}
               ></i>
-            </Box>
+            </Box> */}
+            <Mainu></Mainu>
           </Box>
         </Flex>
       </Box>
       <Box h={"70%"}>
         <Image w="100%" height={"100%"} src={Item.img_url}></Image>
       </Box>
-      <Box
-        //   border="1px solid lightgray"
-        w="100%"
-        height={"60px"}
-      >
-        <Flex justifyContent={"space-between"}>
-          <Box
-            //   border="1px solid red"
-            w="30%"
-          >
-            <Flex
-              justifyContent={"space-evenly"}
-              height={"100%"}
+      <Box>
+        <Box
+          //   border="1px solid lightgray"
+          w="100%"
+          height={"60px"}
+        >
+          <Flex justifyContent={"space-between"}>
+            <Box
+              //   border="1px solid red"
+              w="30%"
+            >
+              <Flex
+                justifyContent={"space-evenly"}
+                height={"100%"}
+                alignItems="center"
+              >
+                <i
+                  onClick={() => handleLikebtn(Item)}
+                  class="fa-regular fa-heart"
+                  id="likesharecommentbtn"
+                  style={CountFlag ? null : { color: "pink" }}
+                ></i>
+                <i id="likesharecommentbtn" class="fa-solid fa-comment"></i>
+                <i
+                  id="likesharecommentbtn"
+                  class="fa-solid fa-up-right-from-square"
+                ></i>
+              </Flex>
+            </Box>
+            <Box
+              //   border="1px solid red"
+              w="10%"
+              height="60px"
+              display={"flex"}
               alignItems="center"
             >
               <i
-                onClick={() => handleLikebtn(Item)}
-                class="fa-regular fa-heart"
-                id="likesharecommentbtn"
-                style={CountFlag ? null : { color: "pink" }}
+                onClick={() => handleSavePost(Item)}
+                class="fa-regular fa-bookmark"
+                style={{
+                  fontSize: "24px",
+                  width: "100%",
+                  textAlign: "center",
+                  cursor: "pointer",
+                }}
               ></i>
-              <i id="likesharecommentbtn" class="fa-solid fa-comment"></i>
-              <i
-                id="likesharecommentbtn"
-                class="fa-solid fa-up-right-from-square"
-              ></i>
-            </Flex>
-          </Box>
-          <Box
-            //   border="1px solid red"
-            w="10%"
-            height="60px"
-            display={"flex"}
-            alignItems="center"
-          >
-            <i
-              class="fa-regular fa-bookmark"
-              style={{
-                fontSize: "24px",
-                width: "100%",
-                textAlign: "center",
-                cursor: "pointer",
-              }}
-            ></i>
-          </Box>
-        </Flex>
-      </Box>
-      <Box
-        //   border="1px solid red"
-        w={["20%", "20%", "20%"]}
-        textAlign={"center"}
-        fontSize="18px"
-      >
-        {Item.countlikes} Likes
-      </Box>
-      <Box
-        //    border={"1px solid black"}
-        mt="10px"
-      >
-        <Text paddingLeft="15px">
+            </Box>
+          </Flex>
+        </Box>
+        <Box
+          //   border="1px solid red"
+          w={["20%", "20%", "20%"]}
+          textAlign={"center"}
+          fontSize="18px"
+          mt="-9px"
+        >
+          {Item.countlikes} Likes
+        </Box>
+        <Text paddingLeft={["10px", "10px", "20px"]}>
           <span
             style={{ fontWeight: "bold", cursor: "pointer", color: "#484848" }}
           >
-            {lastComments.username}{" "}
+            {Item.username}{" "}
           </span>
-          {lastComments.comment}
+          {Item.description}
         </Text>
-        {/* <Text
+        <Box
+          //    border={"1px solid black"}
+          mt="10px"
+        >
+          <AllComments Item={Item}></AllComments>
+          <Text paddingLeft="20px">
+            <span
+              style={{
+                fontWeight: "bold",
+                cursor: "pointer",
+                color: "#484848",
+              }}
+            >
+              {lastComments.username}{" "}
+            </span>
+            {lastComments.comment}
+          </Text>
+          {/* <Text
           //  border={"1px solid red"}
           color="gray"
           paddingLeft="15px"
@@ -176,7 +233,7 @@ const Posts = ({ Item }) => {
         >
           View all {Item.Comments.length} comments
         </Text> */}
-        <AllComments Item={Item}></AllComments>
+        </Box>
       </Box>
       <Box borderTop="1px solid lightgray" h="50px" mt="8px" w="100%" p="6px">
         <Flex h="100%" gap="5px" alignItems={"center"}>

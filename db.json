@@ -24,7 +24,7 @@
       "username": "AkshayKanherkar",
       "img_url": "https://m.timesofindia.com/thumb.cms?msid=88016176&width=200&height=281",
       "description": "Atarangi Re Movie",
-      "countlikes": 2,
+      "countlikes": 3,
       "Comments": [
         {
           "user_id": 2,
@@ -70,6 +70,11 @@
           "user_id": 2,
           "username": "akshaykanherkar7",
           "comment": "aaa"
+        },
+        {
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "waiting to watch.."
         }
       ],
       "Likes": [
@@ -128,13 +133,155 @@
           "username": "akshaykanherkar"
         }
       ]
+    },
+    {
+      "img_url": "https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/09/dhokha-round-d-corner-001.jpg",
+      "description": "DHO KHA Movie",
+      "username": "akshaykanherkar7",
+      "countlikes": 1,
+      "Comments": [
+        {
+          "user_id": 2,
+          "username": "akshaykanherkar7",
+          "comment": "haa"
+        }
+      ],
+      "Likes": [],
+      "id": 5
     }
   ],
   "Save": [
     {
-      "post_id": 1,
+      "id": 1,
       "user_id": 5,
-      "username": "akshaykanherkar"
+      "username": "akshaykanherkar",
+      "posts": []
+    },
+    {
+      "user_id": 1,
+      "posts": [
+        {
+          "id": 1,
+          "username": "AkshayKanherkar",
+          "img_url": "https://m.timesofindia.com/thumb.cms?msid=88016176&width=200&height=281",
+          "description": "Atarangi Re Movie",
+          "countlikes": 3,
+          "Comments": [
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "gggggggggggggggggg"
+            },
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "okok"
+            }
+          ],
+          "Likes": [
+            {
+              "user_id": 5,
+              "username": "akshaykanherkar7"
+            }
+          ]
+        }
+      ],
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "posts": [
+        {
+          "img_url": "https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/09/dhokha-round-d-corner-001.jpg",
+          "description": "DHO KHA Movie",
+          "username": "akshaykanherkar7",
+          "countlikes": 1,
+          "Comments": [
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "haa"
+            }
+          ],
+          "Likes": [],
+          "id": 5
+        }
+      ],
+      "id": 3
+    },
+    {
+      "user_id": 2,
+      "username": "akshaykanherkar7",
+      "posts": [
+        {
+          "id": 1,
+          "username": "AkshayKanherkar",
+          "img_url": "https://m.timesofindia.com/thumb.cms?msid=88016176&width=200&height=281",
+          "description": "Atarangi Re Movie",
+          "countlikes": 3,
+          "Comments": [
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "gggggggggggggggggg"
+            },
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "okok"
+            }
+          ],
+          "Likes": [
+            {
+              "user_id": 5,
+              "username": "akshaykanherkar7"
+            }
+          ]
+        }
+      ],
+      "id": 4
+    },
+    {
+      "user_id": 2,
+      "username": "akshaykanherkar7",
+      "posts": [
+        {
+          "id": 2,
+          "username": "KrunalBhandekar",
+          "img_url": "https://images.lifestyleasia.com/wp-content/uploads/sites/5/2022/01/06123050/131771051_1749755595187759_6764730855785943263_n.jpg",
+          "description": "Pathan",
+          "countlikes": 8,
+          "Comments": [
+            {
+              "user_id": 5,
+              "username": "akshaykanherkar",
+              "comment": "nice"
+            },
+            {
+              "user_id": 6,
+              "username": "Krunalbhandekar",
+              "comment": "nice picture"
+            },
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "AAAAAAA"
+            },
+            {
+              "user_id": 2,
+              "username": "akshaykanherkar7",
+              "comment": "aaa"
+            }
+          ],
+          "Likes": [
+            {
+              "user_id": 5,
+              "username": "akshaykanherkar"
+            }
+          ]
+        }
+      ],
+      "id": 5
     }
   ]
 }

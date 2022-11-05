@@ -36,6 +36,10 @@ const Navbar = () => {
     navigate("/mybookings");
   };
 
+  const handleSavedPost = () => {
+    navigate("/savedposts");
+  };
+
   const handleLogout = () => {
     dispatch(logOutAPI());
     navigate("/");
@@ -83,11 +87,11 @@ const Navbar = () => {
                   <span>My Profile</span>
                 </MenuItem>
                 <MenuItem minH="40px" gap="30px" onClick={handleBooking}>
-                  <i class="fa-solid fa-car"></i>
+                  <i class="fa-solid fa-image"></i>
                   <span>My Posts</span>
                 </MenuItem>
-                <MenuItem minH="40px" gap="30px" onClick={handleBooking}>
-                  <i class="fa-solid fa-car"></i>
+                <MenuItem minH="40px" gap="30px" onClick={handleSavedPost}>
+                  <i class="fa-regular fa-images"></i>
                   <span>Saved Posts</span>
                 </MenuItem>
                 <MenuItem minH="40px" gap="30px" onClick={handleLogout}>

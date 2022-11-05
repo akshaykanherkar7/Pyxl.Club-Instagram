@@ -2,5 +2,9 @@ export const GET_POSTS_REQ = "GET_POSTS_REQ";
 export const GET_POSTS_SUCC = "GET_POSTS_SUCC";
 export const GET_POSTS_FAI = "GET_POSTS_FAI";
 
+export const CREATE_POST_REQ = "CREATE_POST_REQ";
+export const CREATE_POST_SUCC = "CREATE_POST_SUCC";
+export const CREATE_POST_FAI = "CREATE_POST_FAI";
+
 export const LIKES_HANDLE = "LIKES_HANDLE";
 export const COMMENT_POST_HANDLE = "COMMENT_POST_HANDLE";
