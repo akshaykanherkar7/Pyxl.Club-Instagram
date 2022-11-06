@@ -4,7 +4,7 @@ import * as types from "./auth.actionTypes";
 export const registerSignUpAPI = (user) => (dispatch) => {
   dispatch({ type: types.REGISTER_REQ });
   return axios
-    .post("http://localhost:8080/UserData", user)
+    .post("https://instapyxlclubserver.herokuapp.com/api/UserData", user)
     .then((res) => {
       dispatch({ type: types.REGISTER_SUCCESS, payload: res.data });
       return types.REGISTER_SUCCESS;
@@ -18,7 +18,7 @@ export const registerSignUpAPI = (user) => (dispatch) => {
 export const getLoginDataAPI = () => (dispatch) => {
   dispatch({ type: types.GET_LOGINDATA_REQ });
   return axios
-    .get("http://localhost:8080/UserData")
+    .get("https://instapyxlclubserver.herokuapp.com/api/UserData")
     .then((res) => {
       console.log("res:", res);
       dispatch({ type: types.GET_LOGINDATA_SUCCESS, payload: res.data });
@@ -31,7 +31,7 @@ export const getLoginDataAPI = () => (dispatch) => {
 export const checkLoginorNotAPI = (creds) => (dispatch) => {
   dispatch({ type: types.CHECK_LOGIN_REQ });
   return axios
-    .get("http://localhost:8080/UserData")
+    .get("https://instapyxlclubserver.herokuapp.com/api/UserData")
     .then((res) => {
       dispatch({ type: types.CHECK_LOGIN_SUCCESS, payload: creds });
     })
@@ -43,7 +43,7 @@ export const checkLoginorNotAPI = (creds) => (dispatch) => {
 export const updateUserData = (id, data) => (dispatch) => {
   dispatch({ type: types.UPDATE_USERDATA_REQ });
   return axios
-    .put(`http://localhost:8080/UserData/${id}`, data)
+    .put(`https://instapyxlclubserver.herokuapp.com/api/UserData/${id}`, data)
     .then((res) => {
       return types.UPDATE_USERDATA_SUCC;
     })

@@ -4,7 +4,7 @@ import axios from "axios";
 export const savePostAPI = (savePost) => (dispatch) => {
   dispatch({ type: types.SAVE_POST_REQ });
   return axios
-    .post("http://localhost:8080/Save", savePost)
+    .post("https://instapyxlclubserver.herokuapp.com/api/Save", savePost)
     .then((res) => {
       return types.SAVE_POST_SCC;
     })
@@ -16,7 +16,7 @@ export const savePostAPI = (savePost) => (dispatch) => {
 export const getSavedPostsAPI = () => (dispatch) => {
   dispatch({ type: types.GET_POST_FAI });
   return axios
-    .get("http://localhost:8080/Save")
+    .get("https://instapyxlclubserver.herokuapp.com/api/Save")
     .then((res) => {
       dispatch({ type: types.GET_POST_SCC, payload: res.data });
     })

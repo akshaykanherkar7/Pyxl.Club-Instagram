@@ -5,7 +5,7 @@ import axios from "axios";
 export const getPostsAPI = () => (dispatch) => {
   dispatch({ type: types.GET_POSTS_REQ });
   return axios
-    .get("http://localhost:8080/Posts")
+    .get("https://instapyxlclubserver.herokuapp.com/api/Posts")
     .then((res) => {
       dispatch({ type: types.GET_POSTS_SUCC, payload: res.data });
     })
@@ -19,7 +19,7 @@ export const getPostsAPI = () => (dispatch) => {
 export const createPostAPI = (post) => (dispatch) => {
   dispatch({ type: types.CREATE_POST_REQ });
   return axios
-    .post("http://localhost:8080/Posts", post)
+    .post("https://instapyxlclubserver.herokuapp.com/api/Posts", post)
     .then((res) => {
       console.log(res);
       return types.CREATE_POST_SUCC;
@@ -32,13 +32,13 @@ export const createPostAPI = (post) => (dispatch) => {
 
 // LIKES
 export const likeAPI = (id, data) => (dispatch) => {
-  return axios.patch(`http://localhost:8080/Posts/${id}`, data);
+  return axios.patch(`https://instapyxlclubserver.herokuapp.com/api/Posts/${id}`, data);
 };
 
 // COMMENTS
 export const postCommentAPI = (id, newData) => (dispatch) => {
   return axios
-    .put(`http://localhost:8080/Posts/${id}`, newData)
+    .put(`https://instapyxlclubserver.herokuapp.com/api/Posts/${id}`, newData)
     .then((res) => {
       dispatch({ type: types.COMMENT_POST_HANDLE, payload: res.data });
     })
@@ -51,7 +51,7 @@ export const postCommentAPI = (id, newData) => (dispatch) => {
 export const deletePostAPI = (id) => (dispatch) => {
   dispatch({ type: types.DELETE_POST_REQ });
   return axios
-    .delete(`http://localhost:8080/Posts/${id}`)
+    .delete(`https://instapyxlclubserver.herokuapp.com/api/Posts/${id}`)
     .then((res) => {
       return types.DELETE_POST_SUCC;
     })
