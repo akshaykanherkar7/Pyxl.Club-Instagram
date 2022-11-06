@@ -240,7 +240,13 @@ const Posts = ({ Item }) => {
           //    border={"1px solid black"}
           mt="10px"
         >
-          <AllComments Item={Item}></AllComments>
+          {Item.Comments.length === 0 ? (
+            <Text color="gray" paddingLeft="20px" cursor="pointer">
+              No Comments
+            </Text>
+          ) : (
+            <AllComments Item={Item}></AllComments>
+          )}
           <Text paddingLeft="20px">
             <span
               style={{

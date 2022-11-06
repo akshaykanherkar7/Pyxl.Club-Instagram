@@ -98,7 +98,11 @@ const Profile = () => {
                     h="100%"
                     // border={"1px solid red"}
                     borderRadius="35px"
-                    src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                    src={
+                      userData.user_img
+                        ? userData.user_img
+                        : "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                    }
                     alt="user_image"
                   ></Image>
                 </Box>
@@ -119,7 +123,7 @@ const Profile = () => {
                     h="100%"
                     onClick={handleUploadIMG}
                   >
-                    Upload Picture
+                    {userData.user_img ? "Update Picture" : "Upload Picture"}
                   </Button>
                 </Flex>
               </Box>
