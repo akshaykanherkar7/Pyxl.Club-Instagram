@@ -8,7 +8,9 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getLoginDataAPI } from "../../Redux/AuthReducer/auth.action";
 import { likeAPI, postCommentAPI } from "../../Redux/Posts/post.action";
 import {
   getSavedPostsAPI,
@@ -28,9 +30,13 @@ const Posts = ({ Item }) => {
   let userData = JSON.parse(localStorage.getItem("LoginData"));
   // console.log("userData:", userData);
   const [CountFlag, setCountFlag] = useState(true);
+  const [user, setUser] = useState({});
+  console.log("user:", user);
 
   const dispatch = useDispatch();
   const toast = useToast();
+
+  const { loginData } = useSelector((state) => state.auth);
 
   const handleLikebtn = (data) => {
     for (let i = 0; i < likedData.length; i++) {
@@ -90,6 +96,22 @@ const Posts = ({ Item }) => {
     });
   };
 
+  const getUserDetail = () => {
+    for (let i = 0; i < loginData.length; i++) {
+      if (loginData[i].id === Item.user_id) {
+        setUser({ ...loginData[i] });
+        return;
+      }
+    }
+  };
+
+  useEffect(() => {
+    dispatch(getLoginDataAPI());
+  }, []);
+  useEffect(() => {
+    getUserDetail();
+  }, []);
+
   return (
     <div id="MainBox">
       <Box padding={"8px"} w={["100%", "100%", "100%"]}>
@@ -103,7 +125,11 @@ const Posts = ({ Item }) => {
             <Image
               borderRadius={"30px"}
               // border="1px solid red"
-              src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+              src={
+                user.user_img
+                  ? user.user_img
+                  : "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+              }
               w="80%"
               h="100%"
               cursor={"pointer"}

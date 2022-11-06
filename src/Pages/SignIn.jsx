@@ -12,6 +12,7 @@ import {
   Text,
   useColorModeValue,
   Center,
+  Spinner,
 } from "@chakra-ui/react";
 import {
   Modal,
@@ -45,7 +46,7 @@ export const SignIn = ({ isOpen, onOpen, onClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { loginData, isLoading } = useSelector((state) => state.auth);
+  const { loginData, isLoading, isError } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(getLoginDataAPI());
@@ -84,6 +85,16 @@ export const SignIn = ({ isOpen, onOpen, onClose }) => {
   const handleNavigate = () => {
     navigate("/");
   };
+
+  if (isLoading) {
+    return (
+      <Box w="fit-content" m="auto" mt="300px">
+        <Spinner textAlign={"center"} size="xl" />
+      </Box>
+    );
+  }
+  if (isError)
+    return <div style={{ textAlign: "center" }}>Something Went Wrong...</div>;
   return (
     <div>
       <Text mt={4} onClick={onOpen}>
@@ -114,7 +125,7 @@ export const SignIn = ({ isOpen, onOpen, onClose }) => {
                 <Box
                   //   width="140%"
                   rounded={"lg"}
-                  bg={useColorModeValue("white", "gray.700")}
+                  // bg={useColorModeValue("white", "gray.700")}
                   p={1}
                   //   border="1px solid red"
                 >

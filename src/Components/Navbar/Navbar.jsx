@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import SignIn from "../../Pages/SignIn";
 import { logOutAPI } from "../../Redux/AuthReducer/auth.action";
 import { getSavedPostsAPI } from "../../Redux/SavePosts/save.action";
+import Profile from "../Profile/Profile";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,12 +26,12 @@ const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleMyProfile = () => {
-    navigate("/profile");
-  };
+  // const handleMyProfile = () => {
+  //   navigate("/profile");
+  // };
 
   const handleNavigate = () => {
-    navigate("/");
+    isAuth ? navigate("/homepage") : navigate("/");
   };
 
   const handleMyPosts = () => {
@@ -84,9 +85,10 @@ const Navbar = () => {
                 </MenuButton>
               </Flex>
               <MenuList>
-                <MenuItem minH="48px" gap="30px" onClick={handleMyProfile}>
+                <MenuItem minH="48px" gap="30px">
                   <i class="fa-solid fa-user"></i>
-                  <span>My Profile</span>
+                  {/* <span>My Profile</span> */}
+                  <Profile></Profile>
                 </MenuItem>
                 <MenuItem minH="40px" gap="30px" onClick={handleMyPosts}>
                   <i class="fa-solid fa-image"></i>

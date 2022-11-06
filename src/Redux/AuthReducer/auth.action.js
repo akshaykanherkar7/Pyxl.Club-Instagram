@@ -7,11 +7,11 @@ export const registerSignUpAPI = (user) => (dispatch) => {
     .post("http://localhost:8080/UserData", user)
     .then((res) => {
       dispatch({ type: types.REGISTER_SUCCESS, payload: res.data });
-      return types.REGISTER_SUCCESS
+      return types.REGISTER_SUCCESS;
     })
     .catch((e) => {
       dispatch({ type: types.REGISTER_FAILED, payload: e });
-      return types.REGISTER_FAILED
+      return types.REGISTER_FAILED;
     });
 };
 
@@ -37,6 +37,18 @@ export const checkLoginorNotAPI = (creds) => (dispatch) => {
     })
     .catch((e) => {
       dispatch({ type: types.CHECK_LOGIN_FAILED });
+    });
+};
+
+export const updateUserData = (id, data) => (dispatch) => {
+  dispatch({ type: types.UPDATE_USERDATA_REQ });
+  return axios
+    .put(`http://localhost:8080/UserData/${id}`, data)
+    .then((res) => {
+      return types.UPDATE_USERDATA_SUCC;
+    })
+    .catch((err) => {
+      return types.UPDATE_USERDATA_FAI;
     });
 };
 
