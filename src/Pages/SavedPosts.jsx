@@ -1,7 +1,6 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useRouteLoaderData } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import Posts from "../Components/Posts/Posts";
 import Sidebar from "../Components/SideBar/Sidebar";
@@ -39,11 +38,7 @@ const SavedPosts = () => {
           <Box id="sidebar" w={["3%", "5%", "15%"]}>
             <Sidebar></Sidebar>
           </Box>
-          <Box w="15%">
-            {/* <Text textAlign={"center"} mt="2" color="brown" w={["200%", "100%", "100%"]}>
-              Saved Posts
-            </Text> */}
-          </Box>
+          <Box w="15%"></Box>
           <Box w="35%">
             {pData.length > 0 &&
               pData.map((Item) => <Posts key={Item.id} Item={Item}></Posts>)}

@@ -10,7 +10,6 @@ import {
   Stack,
   Button,
   Text,
-  useColorModeValue,
   Center,
   Spinner,
 } from "@chakra-ui/react";
@@ -24,7 +23,6 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 import { useState } from "react";
-// import { Link as RouterLink } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -176,13 +174,7 @@ export const SignIn = ({ isOpen, onOpen, onClose }) => {
                     <Stack pt={6}>
                       <Flex justifyContent="space-evenly">
                         <Text align={"center"}>Don't have account?</Text>
-                        {/* <RouterLink
-                          to="/signup"
-                          color={"blue.400"}
-                          alignItems="center" 
-                        >*/}
                         <SignUp></SignUp>
-                        {/* </RouterLink> */}
                       </Flex>
                     </Stack>
                     <Center p={1}>

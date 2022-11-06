@@ -57,8 +57,6 @@ const Mainu = ({ Item }) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent borderRadius={"12px"} width="380px" mt="200px">
-          {/* <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton /> */}
           <ModalBody>
             <Box height="auto">
               <Grid h="100%" justifyContent={"center"}>

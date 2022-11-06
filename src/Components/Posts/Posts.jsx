@@ -17,6 +17,7 @@ import {
   savePostAPI,
 } from "../../Redux/SavePosts/save.action";
 import { SAVE_POST_SCC } from "../../Redux/SavePosts/save.actionTypes";
+import SharePost from "../SharePost/SharePost";
 import Mainu from "../ThreeMore/Mainu";
 import AllComments from "../ViewAllCmntModal/AllComments";
 import "./Posts.css";
@@ -27,11 +28,10 @@ const Posts = ({ Item }) => {
   });
   const [likedData, setLikedData] = useState([...Item.Likes]);
   const [postCmnt, setPostCmnt] = useState("");
-  let userData = JSON.parse(localStorage.getItem("LoginData"));
-  // console.log("userData:", userData);
   const [CountFlag, setCountFlag] = useState(true);
   const [user, setUser] = useState({});
-  console.log("user:", user);
+
+  let userData = JSON.parse(localStorage.getItem("LoginData"));
 
   const dispatch = useDispatch();
   const toast = useToast();
@@ -192,10 +192,11 @@ const Posts = ({ Item }) => {
                   style={CountFlag ? null : { color: "pink" }}
                 ></i>
                 <i id="likesharecommentbtn" class="fa-solid fa-comment"></i>
-                <i
+                {/* <i
                   id="likesharecommentbtn"
                   class="fa-solid fa-up-right-from-square"
-                ></i>
+                ></i> */}
+                <SharePost></SharePost>
               </Flex>
             </Box>
             <Box

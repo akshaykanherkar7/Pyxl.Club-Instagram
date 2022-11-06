@@ -21,14 +21,11 @@ import Profile from "../Profile/Profile";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const { isAuth } = useSelector((state) => state.auth);
-  const user = JSON.parse(localStorage.getItem("LoginData"));
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // const handleMyProfile = () => {
-  //   navigate("/profile");
-  // };
+  const user = JSON.parse(localStorage.getItem("LoginData"));
+  const { isAuth } = useSelector((state) => state.auth);
 
   const handleNavigate = () => {
     isAuth ? navigate("/homepage") : navigate("/");
@@ -67,7 +64,6 @@ const Navbar = () => {
             Welcome to Instagram
           </Heading>
         </div>
-        {/* <div className={styles.div2}> */}
         {isAuth ? (
           <Box className={styles.innerDiv3}>
             <Menu>
@@ -109,18 +105,15 @@ const Navbar = () => {
           <Box className={styles.innerDiv3}>
             <span class="material-symbols-outlined">login</span>
             <div style={{ marginLeft: "10px", marginTop: "-17px" }}>
-              {/* <Link to="/login"> */}
               <SignIn
                 isOpen={isOpen}
                 onOpen={onOpen}
                 onClose={onClose}
               ></SignIn>
-              {/* </Link> */}
             </div>
           </Box>
         )}
       </div>
-      {/* </div> */}
     </Box>
   );
 };

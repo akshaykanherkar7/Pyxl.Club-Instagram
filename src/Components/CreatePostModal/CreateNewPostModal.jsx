@@ -1,21 +1,17 @@
 import {
   Box,
   Button,
-  Center,
   Flex,
   FormControl,
   FormLabel,
-  HStack,
   Input,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
   Stack,
-  Text,
   Textarea,
   useColorModeValue,
   useDisclosure,
@@ -133,13 +129,6 @@ const CreateNewPostModal = ({ handleCreate, path }) => {
               </Stack>
             </Flex>
           </ModalBody>
-
-          {/* <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
-          </ModalFooter> */}
         </ModalContent>
       </Modal>
     </>

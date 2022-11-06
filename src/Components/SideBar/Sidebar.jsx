@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Sidebar.css";
-import { TiThLarge } from "react-icons/ti";
 import CreateNewPostModal from "../CreatePostModal/CreateNewPostModal";
 import { useNavigate } from "react-router-dom";
 
@@ -77,14 +76,6 @@ const Sidebar = () => {
         path={path}
       ></CreateNewPostModal>
       {/* </div> */}
-
-      {/* <div>
-        <span>
-          <i class="fa-solid fa-people-roof"></i>
-        </span>
-        <span>Staff</span>
-      </div> */}
-
       <div style={{ marginTop: "55px" }}>
         <span id="visible">
           <i class="fas fa-bars" id="bars"></i>

@@ -21,13 +21,6 @@ export const postReducer = (state = initialState, { type, payload }) => {
     }
 
     case types.COMMENT_POST_HANDLE: {
-      // let newData = state.PostsData.map((el) => {
-      //   if (el.id === payload.id) {
-      //     el = payload;
-      //   }
-      //   return el;
-      // });
-      // console.log("payload:", payload);
       return {
         ...state,
         PostsData: [...state.newData],

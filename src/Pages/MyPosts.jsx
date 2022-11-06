@@ -38,14 +38,14 @@ const MyPosts = () => {
             <Sidebar></Sidebar>
           </Box>
           <Box w="15%">
-            <Text
+            {/* <Text
               textAlign={"center"}
               mt="2"
               color="brown"
               w={["200%", "100%", "100%"]}
             >
               My Posts
-            </Text>
+            </Text> */}
           </Box>
           <Box w="35%">
             {myPosts.length > 0 &&

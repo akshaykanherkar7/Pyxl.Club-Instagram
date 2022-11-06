@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React from "react";
 import {
   Flex,
   Box,
@@ -15,7 +15,7 @@ import {
   useDisclosure,
   Center,
 } from "@chakra-ui/react";
-// import { Link as RouterLink } from "react-router-dom";
+
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import {
@@ -229,16 +229,9 @@ const SignUp = () => {
                     <Stack pt={6}>
                       <Text align={"center"} onClick={handleNavigate}>
                         Already a user?{" "}
-                        {/* <RouterLink
-                          to="/login"
-                          color={"blue.400"}
-                          onClick={onClose}
-                          style={{ color: "blue" }}
-                        > */}
                         <label style={{ color: "blue", cursor: "pointer" }}>
                           Login
                         </label>
-                        {/* </RouterLink> */}
                       </Text>
                     </Stack>
                   </Stack>

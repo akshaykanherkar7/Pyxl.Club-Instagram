@@ -35,12 +35,6 @@
   background-color: #fafafa;
 }
 
-/* @media (max-width: 1066px) {
-  #sidebar_Outer {
-    display: none;
-  }
-} */
-
 @media all and (min-width: 768px) and (max-width: 1024px) {
   #sidebar_Outer {
     border: 1px solid lightgray;

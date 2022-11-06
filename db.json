@@ -28,7 +28,7 @@
       "username": "KrunalB",
       "img_url": "https://m.timesofindia.com/thumb.cms?msid=88016176&width=200&height=281",
       "description": "Atarangi Re Movie",
-      "countlikes": 3,
+      "countlikes": 4,
       "Comments": [
         {
           "user_id": 1,
@@ -84,7 +84,7 @@
       "username": "akshaykanherkar7",
       "img_url": "https://filmfare.wwmindia.com/content/2021/jan/bollywood-upcoming-movies-gangubai-kathiawadi-51611325299.jpg",
       "description": "Ganguly Kathawadi",
-      "countlikes": 7,
+      "countlikes": 8,
       "Comments": [
         {
           "user_id": 1,
@@ -125,6 +125,12 @@
           "username": "akshaykanherkar7",
           "comment": "I also went with them.",
           "time": "Sat Nov 05 2022 18:40:51 GMT+0530 (India Standard Time)"
+        },
+        {
+          "user_id": 1,
+          "username": "KrunalB",
+          "comment": "this is nice movie",
+          "time": "Sun Nov 06 2022 14:03:50 GMT+0530 (India Standard Time)"
         }
       ],
       "Likes": [
